@@ -5,8 +5,26 @@ interface IUser {
   email: string,
   password: string,
   phone?: string,
-  posts: Array<Types.ObjectId>
+  posts?: Array<Types.ObjectId>
 }
 
+interface IResponse {
+  success:boolean,
+  message:string,
+  data:any,
+  errors?:string[]
+}
 
-export { IUser }
+interface IRulesValue {
+  min:number,
+  max:number,
+  reg:RegExp
+}
+
+interface IRules{
+  name:IRulesValue,
+  email:IRulesValue,
+  password:IRulesValue
+}
+
+export { IUser , IResponse ,IRules }
