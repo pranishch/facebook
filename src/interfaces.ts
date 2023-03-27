@@ -24,7 +24,8 @@ interface IRulesValue {
 interface IRules{
   name:IRulesValue,
   email:IRulesValue,
-  password:IRulesValue
+  password:IRulesValue,
+  phone:IRulesValue
 }
 
 export { IUser , IResponse ,IRules }
