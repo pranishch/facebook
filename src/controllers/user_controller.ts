@@ -10,7 +10,7 @@ interface IUserDoc extends IUser, Document { }
 const login = async (req: Request, res: Response) => {
 
     var response: IResponse;
-
+    localhost:5000
     const { email, password }: IUser = req.body;
     const validation = validate({ email, password })
     if (!validation.success) return res.send(validation)
